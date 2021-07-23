@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/registros.css" />
+    <link rel="stylesheet" href="./css/button.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
+
+    <script src="./script.js" defer></script>
+
+    <title>Gestão de Cadastros</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Cadastro de Produtos</h1>
+    </header>
+    <main>
+      <div>
+        <a href="../index.html" class="button home mobileH">Home</a>
+        <button type="button" class="button blue mobile" id="cadastrarProduto">
+          Cadastrar Produto
+        </button>
+      </div>
+      <table id="tableProduto" class="registros">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Marca</th>
+            <th>Quantidade</th>
+            <th>-</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="modal" id="modal">
+        <div class="modal-content">
+          <header class="modal-header">
+            <h2>Novo Produto</h2>
+            <span class="modal-close" id="modalClose">&#10006;</span>
+          </header>
+          <form id="form" class="modal-form">
+            <input
+              type="text"
+              id="nome"
+              data-index="new"
+              class="modal-field"
+              placeholder="Nome do Produto"
+              required
+            />
+            <input
+              type="number"
+              id="preco"
+              class="modal-field"
+              placeholder="Preço do Produto"
+              required
+            />
+            <input
+              type="text"
+              id="marca"
+              class="modal-field"
+              placeholder="Marca do Produto"
+              required
+            />
+            <input
+              type="number"
+              id="quant"
+              class="modal-field"
+              placeholder="Quantidade em Estoque"
+              required
+            />
+          </form>
+          <footer class="modal-footer">
+            <button id="salvar" class="button green">Salvar</button>
+            <button id="cancelar" class="button blue">Cancelar</button>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <footer>Copyright &copy; Dev {Cristiano Vieira}</footer>
+  </body>
+</html>
